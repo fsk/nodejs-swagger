@@ -1,0 +1,35 @@
+components:
+  schemas:
+    Book:
+      type: object
+      required:
+        - kitapIsmi
+        - sayfaSayisi
+        - aciklama
+        - yazarAdiSoyadi
+      properties:
+        id:
+          type: string
+          description: Id degeri db tarafindan otomatik olarak olusturulmakta
+        kitapIsmi:
+          type: string
+          description: Kitabin basligi / adi
+        sayfaSayisi:
+          type: Number
+          description: Kitabin sayfa sayisi
+        aciklama:
+          type: string
+          description: Min length 10 max length 100 olacak
+          unique: true
+        createdTime: 
+           type: Date
+           descripiton: Kayit yapildigi zaman otomatik olarak olusturulur.
+        updatedTime: 
+           type: Date
+           descripiton: Kayit yapildigi zaman otomatik olusturulur.
+      example:
+        id: 60e40bda95c6e5460032b559
+        kitapIsmi: Nutuk
+        sayfaSayisi: 750
+        aciklama: Her Turk gencinin okumasi gereken bir kitap
+        yazarAdiSoyadi: Mustafa Kemal Ataturk

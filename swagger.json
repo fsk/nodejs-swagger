@@ -1,0 +1,137 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "FSK Node.JS - Mongo - Swagger CRUD Project",
+        "description": "Book Library Crud Project",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "tags": [{
+        "name": "Book",
+        "description": "API for Book Management"
+    }],
+    "paths": {
+        "/book": {
+            "get": {
+                "tags": ["Book"],
+                "summary": "Get All Books in MongoDB",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Book"
+                        }
+                    }
+                }
+            }
+        },
+        "/book/{id}": {
+            "get": {
+                "tags": ["Book"],
+                "summary": "Verilen ID ye gore Kitap getirir",
+                "parameters": [{
+                    "type": "string",
+                    "name": "id",
+                    "in": "path",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Book"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Book"],
+                "summary": "Verilen ID ye gore Kitap siler",
+                "parameters": [{
+                    "type": "string",
+                    "name": "id",
+                    "in": "path",
+                    "required": true
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Failed"
+                    }
+                }
+            },
+            "patch": {
+                "tags": ["Book"],
+                "summary": "Verilen ID ye gore Kitap gunceller",
+                "parameters": [{
+                    "name": "id",
+                    "in": "path",
+                    "description": "Book detail",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Book"
+                        }
+                    },
+                    "404": {
+                        "description": "Kitap bulunamadi"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Book": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Mongo tarafindan otomatik olarak olusturulur"
+                },
+                "kitapIsmi": {
+                    "type": "string",
+                    "minimum": 3,
+                    "maximum": 50,
+                    "required": ["true"]
+                },
+                "sayfaSayisi": {
+                    "type": "number",
+                    "require": "true"
+                },
+                "aciklama": {
+                    "type": "string",
+                    "require": "true",
+                    "minimum": 10,
+                    "maximum": 100,
+                    "uniqueItems": true
+                },
+                "yazarAdiSoyadi": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 100,
+                    "require": true
+                },
+                "createdAd": {
+                    "type": "object",
+                    "description": "Bu alan Mongo tarafindan otomatk olusturulur"
+                },
+                "updatedAd": {
+                    "type": "object",
+                    "description": "Bu alan Mongo tarafindan otomatk olusturulur"
+                }
+            }
+        }
+    }
+}

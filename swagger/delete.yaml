@@ -1,0 +1,24 @@
+    delete:
+       summary: Verilen id ye gore kitap siler
+       tags: [Books]
+       parameters:
+           -in: path
+           name: id
+           schema:
+               type: string
+           require: true
+           description: Kitabin id si
+  
+       responses:
+           200:
+              description: Kitap Silindi
+              content:
+                   application/json:
+                       schema:
+                           $ref: '#/components/schemas/Book'
+           404:
+               description: Kitap bulunamadi
+               content:
+                   application/json:
+                       schema:
+                           $ref: '#/components/schemas/Book'

@@ -1,0 +1,26 @@
+@BASE_URL = http://localhost:4000/book
+
+
+###
+POST {{BASE_URL}}
+
+Content-Type: application/json
+{
+    "kitapIsmi": "Simyaci",
+    "sayfaSayisi": 420,
+    "aciklama": "Simyaci olmak isteyen birisinin yasadigi maceralar",
+    "yazarAdiSoyadi": "Paulo Coelho"
+}
+
+
+
+###
+GET {{BASE_URL}}/60e40bda95c6e5460032b559
+
+
+###
+GET {{BASE_URL}}/
+
+
+###
+GET {{BASE_URL}}/filter-page-number/450

@@ -1,0 +1,59 @@
+[{
+
+        "kitapIsmi": "Hayvanlar Ciftligi",
+        "sayfaSayisi": 450,
+        "aciklama": "Komunizmi yeren bir kitap",
+        "yazarAdiSoyadi": "George Orwell"
+
+
+    },
+    {
+
+        "kitapIsmi": "Kuyucakli Yusuf",
+        "sayfaSayisi": 300,
+        "aciklama": "Acikli bir ask hikayesi anlatilir",
+        "yazarAdiSoyadi": "Sabahattin Ali"
+
+    },
+    {
+
+        "kitapIsmi": "Kurk Mantolu Madonna",
+        "sayfaSayisi": 350,
+        "aciklama": "Almanyada gecen bir ask hikayesi",
+        "yazarAdiSoyadi": "Sabahattin Ali"
+
+    },
+    {
+
+        "kitapIsmi": "Icimizdeki Seytan",
+        "sayfaSayisi": 325,
+        "aciklama": "Istanbulda gecen bir aile hikayesi",
+        "yazarAdiSoyadi": "Sabahattin Ali"
+
+    },
+    {
+
+        "kitapIsmi": "Kavgam",
+        "sayfaSayisi": 700,
+        "aciklama": "Adolf Hitler'in biyografisi",
+        "yazarAdiSoyadi": "Adolf Hitler"
+
+    },
+    {
+
+        "kitapIsmi": "1984",
+        "sayfaSayisi": 400,
+        "aciklama": "Gercekten Cok guzel bir kitap",
+        "yazarAdiSoyadi": "George Orwell"
+
+    },
+    {
+
+        "kitapIsmi": "Simyaci",
+        "sayfaSayisi": 420,
+        "aciklama": "Simyaci olmak isteyen birisinin yasadigi maceralar",
+        "yazarAdiSoyadi": "Paulo Coelho"
+
+
+    }
+]
